@@ -80,4 +80,7 @@ Run a CMD as elevated admin: psexec -h -i cmd.exe
 
 ⚠️ 7. Warning PsExec with SYSTEM privileges gives full control over Windows. A mistake can: 🧨 Break system files 🔥 Disable services 💀 Make Windows unbootable
 
-Use responsibly and only on systems you own.
+Use responsibly and only on systems you own.  IM NOT RESPONSIBLE IF YOUR COMPUTER IS CORRUPTED OR LOST FILES.
+
+
+8.Make sure to use a VM for do this for avoid the death of your computer or use it as Debug Test so do a full Backup of your computer bfore any actions PLS.
