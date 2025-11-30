@@ -4,16 +4,6 @@ Run cmd.exe with SYSTEM Permission (Windows himself) WARNING: USE CMD AS SYSTEM 
 
 Sysinternals & PsExec Installation Guide
 
-Below is a plain text version with emojis, including:
-
-License information
-
-How your EXE installs and works
-
-Requirements
-
-PsExec usage
-
 ====================================================
 
 📦 1. What You Need
