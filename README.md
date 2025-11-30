@@ -83,4 +83,4 @@ Run a CMD as elevated admin: psexec -h -i cmd.exe
 Use responsibly and only on systems you own.  IM NOT RESPONSIBLE IF YOUR COMPUTER IS CORRUPTED OR LOST FILES.
 
 
-8.Make sure to use a VM for do this for avoid the death of your computer or use it as Debug Test so do a full Backup of your computer bfore any actions PLS.
+8.Make sure to use a VM for do this for avoid the death of your computer or use it as Debug Test so do a full Backup of your computer before any actions PLS.
