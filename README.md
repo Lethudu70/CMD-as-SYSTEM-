@@ -1,86 +1,147 @@
-# CMD-as-SYSTEM-
-Run cmd.exe with SYSTEM Permission (Windows himself) WARNING: USE CMD AS SYSTEM VERY CAREFULY BECAUSE YOU CAN DO EVERYTHING IN WINDOWS BEYOND ADMINS RIGHT AND ONE MISTAKE WITH WINDOWS COMPONENTS SYSTEM=OS DEAD. I provide this programs only for advenced users or devs and debug context. im not responsible if your computer/OS is dead.
+⚠️ WARNING — READ CAREFULLY
+
+This tool allows you to run cmd.exe with SYSTEM privileges (the highest permission level in Windows — higher than Administrator).
+
+⚠️ SYSTEM = Windows itself
+A single mistake can:
+
+Corrupt system files
+
+Break Windows services
+
+Make the OS unbootable
+
+This project is intended ONLY for advanced users, developers, and debugging purposes.
+
+I am NOT responsible for any damage, data loss, or OS corruption.
+Use at your own risk.
+
+📦 1. Requirements
+
+Windows OS
+
+Administrator privileges
+
+Sysinternals Suite (official Microsoft tools)
+
+PsExec.exe must be available
+
+This EXE depends on PsExec to function
+
+📥 2. Download Sysinternals Suite
+
+Official Microsoft link:
+https://learn.microsoft.com/sysinternals/downloads/sysinternals-suite
+
+Download the ZIP archive
+
+Extract it to a folder, for example:
+
+C:\Sysinternals\
 
 
-Sysinternals & PsExec Installation Guide
+Make sure this folder contains:
 
-====================================================
+PsExec.exe
 
-📦 1. What You Need
-
-Sysinternals Suite (official Microsoft toolkit)
-
-PsExec.exe must be present in the Sysinternals folder
-
-Administrator rights required
-
-Your EXE requires Sysinternals to function
-
-====================================================
-
-📥 2. Download Sysinternals Suite Official link: https://learn.microsoft.com/sysinternals/downloads/sysinternals-suite
-
-Download the ZIP and extract it to a folder such as: C:/Sysinternals/
-
-This folder must contain PsExec.exe.
-
-====================================================
-
-🛠️ 3. Add Sysinternals to the Windows PATH
+🛠️ 3. Add Sysinternals to Windows PATH
 
 Open Windows Settings
 
-System → About → Advanced System Settings
+Go to System → About
 
-Environment Variables
+Click Advanced system settings
 
-In "System variables", select Path → Edit
+Open Environment Variables
 
-Add this entry: C:/Sysinternals/
+In System variables, select Path → Edit
+
+Add:
+
+C:\Sysinternals\
+
 
 Confirm all dialogs
 
-➡️ You can now run psexec from any folder.
+➡️ You can now run psexec from any directory.
 
-====================================================
+⚖️ 4. Sysinternals License Notice
 
-⚖️ 4. License Sysinternals tools use the Microsoft Sysinternals Software License Terms.
+Sysinternals tools are governed by the Microsoft Sysinternals Software License Terms.
 
-This includes: ✔ You may use the tools ✔ You may redistribute the original unmodified package when allowed ✖ You may NOT modify Sysinternals executables ✖ You may NOT reverse engineer them ✖ You may NOT distribute modified versions
+✔ Allowed:
 
-Your EXE does not modify Sysinternals, so its usage is allowed.
+Use the tools
 
-====================================================
+Redistribute the original, unmodified package where permitted
 
-🚀 5. How Your EXE Works Your EXE acts as a launcher for PsExec.
+✖ Not allowed:
 
-When executed, it internally runs a command similar to: psexec -s -i cmd.exe
+Modify Sysinternals executables
+
+Reverse engineer them
+
+Distribute modified versions
+
+✅ This project does NOT modify Sysinternals.
+It only calls PsExec, so usage is compliant.
+
+🚀 5. How This EXE Works
+
+This EXE is a launcher for PsExec.
+
+Internally, it executes a command similar to:
+
+psexec -s -i cmd.exe
+
 
 Meaning:
 
-It calls PsExec
+-s → Run as SYSTEM
 
-It requests SYSTEM-level privilege (-s)
+-i → Interactive session
 
-It opens an interactive window (-i)
+Opens a SYSTEM-level Command Prompt instantly
 
-You instantly get a SYSTEM Command Prompt
+⚠️ PsExec.exe must be installed or present in PATH
+If PsExec is missing, this EXE will NOT work.
 
-➡️ Your EXE requires PsExec.exe to be installed or located in the same directory. ➡️ If PsExec is missing, the EXE cannot work.
+⚡ 6. PsExec Manual Usage Examples
 
-====================================================
+Open SYSTEM Command Prompt:
 
-⚡ 6. Using PsExec Manually Open SYSTEM CMD: psexec -s -i cmd.exe
-
-Run a program as SYSTEM: psexec -s -i notepad.exe
-
-Run a CMD as elevated admin: psexec -h -i cmd.exe
-
-====================================================
-
-⚠️ 7. Warning PsExec with SYSTEM privileges gives full control over Windows. A mistake can: 🧨 Break system files 🔥 Disable services 💀 Make Windows unbootable
-
-Use responsibly and only on systems you own.  IM NOT RESPONSIBLE IF YOUR COMPUTER IS CORRUPTED OR LOST FILES.
+psexec -s -i cmd.exe
 
 
-8.Make sure to use a VM for do this for avoid the death of your computer or use it as Debug Test so do a full Backup of your computer before any actions PLS.
+Run Notepad as SYSTEM:
+
+psexec -s -i notepad.exe
+
+
+Run CMD as elevated Administrator:
+
+psexec -h -i cmd.exe
+
+⚠️ 7. Final Warning
+
+Using PsExec with SYSTEM privileges gives FULL control over Windows.
+
+A mistake can:
+
+🧨 Destroy system files
+
+🔥 Disable critical services
+
+💀 Kill the operating system
+
+👉 Only use on systems you own.
+
+🧪 8. Strong Recommendation
+
+Use this tool inside a virtual machine
+
+OR make a full system backup before usage
+
+Treat SYSTEM access as debug / test only
+
+DO NOT use casually on your main machine.
