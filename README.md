@@ -1,3 +1,5 @@
+CMD as SYSTEM — Windows SYSTEM Command Prompt Launcher
+
 ⚠️ WARNING — READ CAREFULLY
 
 This tool allows you to run cmd.exe with SYSTEM privileges (the highest permission level in Windows — higher than Administrator).
